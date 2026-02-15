@@ -5,53 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heartroot — Katie Tudor</title>
     <meta name="description" content="Pottery, ceramics, and mixed media art by Katie Tudor. Based in White Lake, Michigan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="/" class="logo">Heartroot</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero -->
         <section id="hero">
-            <h1>Heartroot</h1>
-            <p class="tagline">Pottery & Mixed Media by Katie Tudor</p>
-        </section>
-
-        <section id="about">
-            <h2>About</h2>
-            <div class="bio">
-                <p>I’m Katie Tudor, an artist based in White Lake, Michigan. I’ve been creating my whole life — it’s just how I process the world.</p>
-
-                <p>My work lives somewhere between pottery and mixed media. I make things with my hands — clay, paint, whatever the piece needs. A lot of what I create comes from the idea of breaking and rebuilding. Things crack. Things fall apart. But that’s not where the story ends.</p>
-
-                <p>I’m drawn to kintsugi — the Japanese practice of repairing broken ceramics with gold. Not hiding the damage, but honoring it. Making the break part of the beauty. That philosophy runs through everything I do, whether it’s a vessel on the wheel or paint on canvas.</p>
-
-                <p>Heartroot is where all of that lives. The root of it. The heart of it.</p>
+            <div class="hero-content">
+                <p class="hero-pre">Pottery &amp; Mixed Media</p>
+                <h1>Heartroot</h1>
+                <p class="tagline">Art by Katie Tudor</p>
+                <div class="hero-line"></div>
+                <p class="hero-location">White Lake, Michigan</p>
             </div>
         </section>
 
-        <section id="work">
-            <h2>Work</h2>
-            <p class="placeholder">Gallery coming soon.</p>
+        <!-- About -->
+        <section id="about">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2>The Artist</h2>
+            </div>
+            <div class="bio">
+                <p>I'm Katie Tudor, an artist based in White Lake, Michigan. I've been creating my whole life — it's just how I process the world.</p>
+
+                <p>My work lives somewhere between pottery and mixed media. I make things with my hands — clay, paint, whatever the piece needs. A lot of what I create comes from the idea of breaking and rebuilding. Things crack. Things fall apart. But that's not where the story ends.</p>
+
+                <p>I'm drawn to kintsugi — the Japanese practice of repairing broken ceramics with gold. Not hiding the damage, but honoring it. Making the break part of the beauty. That philosophy runs through everything I do, whether it's a vessel on the wheel or paint on canvas.</p>
+
+                <p class="bio-closing">Heartroot is where all of that lives. The root of it. The heart of it.</p>
+            </div>
         </section>
 
+        <div class="section-divider"><span class="divider-symbol">&#9672;</span></div>
+
+        <!-- Work -->
+        <section id="work">
+            <div class="section-header">
+                <span class="section-label">Work</span>
+                <h2>Gallery</h2>
+            </div>
+            <div class="gallery-preview">
+                <div class="placeholder-grid">
+                    <div class="placeholder-item">
+                        <div class="placeholder-inner">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2C12 2 14 6 14 12C14 18 12 22 12 22"/>
+                                <path d="M12 2C12 2 10 6 10 12C10 18 12 22 12 22"/>
+                            </svg>
+                            <span>Ceramics</span>
+                        </div>
+                    </div>
+                    <div class="placeholder-item">
+                        <div class="placeholder-inner">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 15L9 9L13 13L18 8L21 11"/>
+                            </svg>
+                            <span>Paintings</span>
+                        </div>
+                    </div>
+                    <div class="placeholder-item">
+                        <div class="placeholder-inner">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z"/>
+                            </svg>
+                            <span>Mixed Media</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="gallery-note">New work in progress on the wheel — gallery coming soon.</p>
+            </div>
+        </section>
+
+        <div class="section-divider"><span class="divider-symbol">&#9672;</span></div>
+
+        <!-- Philosophy -->
+        <section id="philosophy">
+            <div class="section-header">
+                <span class="section-label">Philosophy</span>
+                <h2>Kintsugi</h2>
+            </div>
+            <div class="philosophy-content">
+                <blockquote>
+                    <p>The world breaks everyone, and afterward, some are strong at the broken places.</p>
+                    <cite>— Ernest Hemingway</cite>
+                </blockquote>
+                <div class="philosophy-text">
+                    <p>Kintsugi is the Japanese art of repairing broken pottery with lacquer mixed with gold. Rather than disguising the damage, it treats the breakage as part of the object's history — something to illuminate, not hide.</p>
+                    <p>This isn't just a technique. It's a way of seeing. Every crack is a story. Every repair is a choice to keep going. The gold doesn't erase what happened — it says <em>this is where I broke, and this is where I'm beautiful.</em></p>
+                    <p>That's what Heartroot is about.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span class="divider-symbol">&#9672;</span></div>
+
+        <!-- Contact -->
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Want to connect, collaborate, or ask about a piece?</p>
-            <p>Reach out at <a href="mailto:katiejjca@gmail.com">katiejjca@gmail.com</a></p>
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <p>Want to connect, collaborate, or ask about a piece?</p>
+                <a href="mailto:katiejjca@gmail.com" class="contact-email">katiejjca@gmail.com</a>
+                <p class="contact-location">White Lake, Michigan</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Katie Tudor — Heartroot</p>
+        <div class="footer-content">
+            <div class="footer-logo">Heartroot</div>
+            <p>&copy; 2026 Katie Tudor</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
