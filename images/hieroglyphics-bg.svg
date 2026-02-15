@@ -3,8 +3,8 @@
   <!-- Rendered in muted earth tones at low opacity for background texture -->
   <defs>
     <style>
-      .glyph { fill: none; stroke: #c9b99a; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; opacity: 0.12; }
-      .glyph-fill { fill: #c9b99a; stroke: none; opacity: 0.08; }
+      .glyph { fill: none; stroke: #c9b99a; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; opacity: 0.25; }
+      .glyph-fill { fill: #c9b99a; stroke: none; opacity: 0.20; }
     </style>
   </defs>
 
@@ -104,7 +104,7 @@
   <!-- Mountain/pyramid -->
   <g transform="translate(160, 295)">
     <path d="M 15 5 L 2 32 L 28 32 Z" class="glyph"/>
-    <line x1="15" y1="5" x2="15" y2="32" class="glyph" style="opacity: 0.06"/>
+    <line x1="15" y1="5" x2="15" y2="32" class="glyph" style="opacity: 0.15"/>
   </g>
 
   <!-- Bird (soul, freedom) -->
@@ -121,6 +121,6 @@
     <path d="M 15 28 C 8 28, 3 22, 3 15" class="glyph"/>
     <path d="M 3 15 C 3 8, 8 3, 15 3" class="glyph"/>
     <!-- The gold crack -->
-    <path d="M 12 3 L 14 10 L 11 15 L 16 20 L 13 28" style="stroke: #c4854c; stroke-width: 1.5; fill: none; opacity: 0.15; stroke-linecap: round;"/>
+    <path d="M 12 3 L 14 10 L 11 15 L 16 20 L 13 28" style="stroke: #c4854c; stroke-width: 1.5; fill: none; opacity: 0.30; stroke-linecap: round;"/>
   </g>
 </svg>
