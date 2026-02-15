@@ -76,17 +76,49 @@ section {
 
 #hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
-#hero p {
+#hero .tagline {
     font-size: 1.25rem;
     color: #666;
+    font-style: italic;
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Bio ===== */
+.bio p {
+    max-width: 680px;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.bio p:last-child {
+    font-style: italic;
+    color: #666;
+}
+
+.placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* ===== Contact ===== */
+#contact a {
+    color: #333;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#contact a:hover {
+    color: #000;
 }
 
 /* ===== Footer ===== */
