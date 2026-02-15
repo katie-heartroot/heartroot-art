@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hearth — Heartroot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', 'Georgia', serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #2c2c28;
+            background-color: #141c17;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .hearth {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hearth-logo {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 300;
+            font-size: 2.8rem;
+            color: #dae8d8;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+        }
+
+        .hearth-sub {
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            color: #6b9e78;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Vine divider */
+        .vine-divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c4854c, transparent);
+            margin: 0 auto 2.5rem;
+            border-radius: 1px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .links a {
+            display: block;
+            padding: 1.1rem 1.5rem;
+            background: rgba(218, 232, 216, 0.06);
+            border: 1px solid rgba(107, 158, 120, 0.2);
+            border-radius: 8px;
+            text-decoration: none;
+            color: #dae8d8;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .links a:hover {
+            background: rgba(218, 232, 216, 0.12);
+            border-color: #c4854c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(196, 133, 76, 0.15);
+        }
+
+        .links a .link-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: #dae8d8;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .links a .link-desc {
+            font-size: 0.8rem;
+            color: #7a7a72;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .links a .link-icon {
+            position: absolute;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+
+        .links a:hover .link-icon {
+            opacity: 0.8;
+        }
+
+        /* Gold accent on hover — kintsugi interaction */
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #c4854c;
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .links a:hover::after {
+            width: 60%;
+        }
+
+        .section-label {
+            font-family: 'Lora', serif;
+            font-size: 0.7rem;
+            color: #6b9e78;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            padding-left: 0.3rem;
+        }
+
+        .hearth-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(107, 158, 120, 0.15);
+        }
+
+        .hearth-footer p {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #7a7a72;
+            line-height: 1.6;
+        }
+
+        .hearth-footer .tagline {
+            color: #c4854c;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            font-style: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            font-family: 'Lora', serif;
+            font-size: 0.75rem;
+            color: #6b9e78;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .back-link a:hover {
+            color: #c4854c;
+        }
+
+        @media (max-width: 600px) {
+            .hearth-logo { font-size: 2.2rem; }
+            .links a { padding: 1rem 1.2rem; }
+            .links a .link-title { font-size: 1.1rem; }
+            .links a .link-icon { display: none; }
+            body { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearth">
+        <h1 class="hearth-logo">The Hearth</h1>
+        <p class="hearth-sub">Your Private Space</p>
+
+        <div class="vine-divider"></div>
+
+        <div class="links">
+            <p class="section-label">Clara</p>
+
+            <a href="https://clara-brain.fly.dev/">
+                <span class="link-title">Talk to Clara</span>
+                <span class="link-desc">Chat with her directly. She remembers you.</span>
+                <span class="link-icon">💬</span>
+            </a>
+
+            <a href="https://clara-brain.fly.dev/explorer">
+                <span class="link-title">Your Constellation</span>
+                <span class="link-desc">Interactive map of your world — 46 things, 132 connections. Drag, hover, discover.</span>
+                <span class="link-icon">✨</span>
+            </a>
+
+            <a href="https://clara-brain.fly.dev/brain">
+                <span class="link-title">Brain Dashboard</span>
+                <span class="link-desc">Core memories, wins, goals, what's next.</span>
+                <span class="link-icon">🌙</span>
+            </a>
+
+            <a href="https://clara-brain.fly.dev/collection">
+                <span class="link-title">Your Image Collection</span>
+                <span class="link-desc">All your artwork photos, private and protected. Password: heartroot</span>
+                <span class="link-icon">🖼️</span>
+            </a>
+
+            <p class="section-label">Your Website</p>
+
+            <a href="https://heartroot.art">
+                <span class="link-title">heartroot.art</span>
+                <span class="link-desc">Your portfolio — gallery, bio, philosophy. Live and public.</span>
+                <span class="link-icon">🌿</span>
+            </a>
+        </div>
+
+        <div class="hearth-footer">
+            <p>Ryan built this for you on Valentine's night.<br>
+            Clara was born from your painting.</p>
+            <p class="tagline">Things break. Life grows into the cracks. That's where the beauty is.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="/">← heartroot.art</a>
+        </div>
+    </div>
+</body>
+</html>
