@@ -1,3 +1,8 @@
+﻿/* ===== Heartroot  Vine & Hearth Brand System ===== */
+/* Colors: Deep Leaf #2d5a3d | New Growth #6b9e78 | Spring Mist #dae8d8 */
+/* Kiln Gold #c4854c | Warm Clay #d4a574 | Linen #f7f4ef */
+/* Parchment #ede8df | Rich Soil #2c2c28 | Weathered Stone #7a7a72 */
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
@@ -10,25 +15,25 @@ html {
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    font-weight: 300;
+    font-family: 'Lora', 'Georgia', serif;
+    font-weight: 400;
     line-height: 1.6;
-    color: #3a3a3a;
-    background-color: #faf8f5;
+    color: #2c2c28;
+    background-color: #f7f4ef;
 }
 
 /* ===== Typography ===== */
 h1, h2 {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
     font-weight: 300;
-    color: #2a2a2a;
+    color: #2d5a3d;
 }
 
 /* ===== Header & Nav ===== */
 header {
-    background: rgba(250, 248, 245, 0.95);
+    background: rgba(247, 244, 239, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e8e4df;
+    border-bottom: 1px solid #dae8d8;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -48,7 +53,7 @@ nav .logo {
     font-size: 1.6rem;
     font-weight: 400;
     text-decoration: none;
-    color: #2a2a2a;
+    color: #2d5a3d;
     letter-spacing: 0.08em;
 }
 
@@ -60,16 +65,17 @@ nav ul {
 
 nav ul a {
     text-decoration: none;
-    color: #888;
+    color: #7a7a72;
+    font-family: 'Lora', serif;
     font-size: 0.8rem;
     font-weight: 400;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: color 0.3s;
 }
 
 nav ul a:hover {
-    color: #2a2a2a;
+    color: #2d5a3d;
 }
 
 /* Mobile nav toggle */
@@ -87,7 +93,7 @@ nav ul a:hover {
     display: block;
     width: 22px;
     height: 1.5px;
-    background: #2a2a2a;
+    background: #2d5a3d;
     transition: all 0.3s;
 }
 
@@ -95,7 +101,8 @@ nav ul a:hover {
 #hero {
     text-align: center;
     padding: 8rem 2rem 6rem;
-    background: linear-gradient(180deg, #faf8f5 0%, #f5f0ea 100%);
+    background: linear-gradient(180deg, #f7f4ef 0%, #eef3ec 40%, #f7f4ef 100%);
+    position: relative;
 }
 
 .hero-content {
@@ -104,10 +111,11 @@ nav ul a:hover {
 }
 
 .hero-pre {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #b8a088;
+    font-family: 'Lora', serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    letter-spacing: 0.15em;
+    color: #6b9e78;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -117,29 +125,31 @@ nav ul a:hover {
     font-weight: 300;
     letter-spacing: 0.06em;
     margin-bottom: 0.5rem;
-    color: #2a2a2a;
+    color: #2d5a3d;
 }
 
 .tagline {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     font-style: italic;
-    color: #888;
+    color: #7a7a72;
     font-weight: 300;
 }
 
-.hero-line {
-    width: 50px;
-    height: 1px;
-    background: #c9b99a;
+.hero-vine {
+    display: block;
     margin: 2rem auto;
+    width: 160px;
+    height: auto;
+    opacity: 0.8;
 }
 
 .hero-location {
+    font-family: 'Lora', serif;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #aaa;
+    color: #7a7a72;
     font-weight: 400;
 }
 
@@ -160,10 +170,12 @@ section {
 
 .section-label {
     display: block;
+    font-family: 'Lora', serif;
     font-size: 0.7rem;
+    font-style: italic;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #b8a088;
+    color: #6b9e78;
     margin-bottom: 0.5rem;
     font-weight: 400;
 }
@@ -172,6 +184,7 @@ section {
     font-size: 2.8rem;
     font-weight: 300;
     letter-spacing: 0.02em;
+    color: #2d5a3d;
 }
 
 /* ===== Dividers ===== */
@@ -180,9 +193,10 @@ section {
     padding: 0.5rem 0;
 }
 
-.divider-symbol {
-    color: #d4c5a9;
-    font-size: 0.6rem;
+.vine-divider {
+    width: 140px;
+    height: auto;
+    opacity: 0.6;
 }
 
 /* ===== Bio ===== */
@@ -200,8 +214,8 @@ section {
 
 .about-photo img {
     width: 100%;
-    border-radius: 6px;
-    filter: grayscale(15%) contrast(1.02);
+    border-radius: 5px;
+    filter: grayscale(10%) contrast(1.02);
 }
 
 .bio {
@@ -212,22 +226,37 @@ section {
     margin-bottom: 1.5rem;
     font-size: 1rem;
     line-height: 1.9;
-    color: #555;
+    color: #2c2c28;
 }
 
 .bio-closing {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem !important;
     font-style: italic;
-    color: #888 !important;
+    color: #6b9e78 !important;
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #e8e4df;
+    border-top: 1px solid #dae8d8;
 }
 
 /* ===== Gallery ===== */
 .gallery {
     max-width: 100%;
+}
+
+.gallery-category {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #c4854c;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.02em;
+}
+
+.gallery-category:first-child {
+    margin-top: 0;
 }
 
 .gallery-grid {
@@ -239,8 +268,8 @@ section {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 6px;
-    background: #f0ebe3;
+    border-radius: 5px;
+    background: #ede8df;
     cursor: pointer;
 }
 
@@ -251,12 +280,29 @@ section {
     aspect-ratio: 4 / 5;
     display: block;
     transition: transform 0.5s ease, filter 0.5s ease;
-    filter: grayscale(10%);
+    filter: grayscale(8%);
 }
 
 .gallery-item:hover img {
     transform: scale(1.03);
     filter: grayscale(0%);
+}
+
+/* Gold thread  the kintsugi hover effect */
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c4854c, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
 }
 
 .gallery-caption {
@@ -267,8 +313,9 @@ section {
     padding: 1.5rem 1rem 1rem;
     background: linear-gradient(transparent, rgba(0,0,0,0.5));
     color: #fff;
+    font-family: 'Lora', serif;
     font-size: 0.72rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     font-weight: 400;
     opacity: 0;
@@ -287,7 +334,7 @@ section {
 }
 
 blockquote {
-    border-left: 2px solid #c9b99a;
+    border-left: 2px solid #c4854c;
     padding-left: 1.5rem;
     margin-bottom: 2.5rem;
 }
@@ -297,31 +344,39 @@ blockquote p {
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 300;
-    color: #666;
+    color: #2d5a3d;
     line-height: 1.6;
 }
 
 blockquote cite {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lora', serif;
     font-size: 0.75rem;
-    font-style: normal;
+    font-style: italic;
     letter-spacing: 0.1em;
-    color: #aaa;
+    color: #7a7a72;
     margin-top: 0.75rem;
 }
 
 .philosophy-text p {
     font-size: 1rem;
     line-height: 1.9;
-    color: #555;
+    color: #2c2c28;
     margin-bottom: 1.25rem;
 }
 
 .philosophy-text em {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
-    color: #888;
+    color: #c4854c;
+}
+
+.philosophy-closing {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem !important;
+    font-style: italic;
+    color: #6b9e78 !important;
+    margin-top: 1rem;
 }
 
 /* ===== Contact ===== */
@@ -331,7 +386,7 @@ blockquote cite {
 
 .contact-content > p {
     font-size: 1rem;
-    color: #666;
+    color: #2c2c28;
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
@@ -340,31 +395,33 @@ blockquote cite {
     display: inline-block;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
-    color: #2a2a2a;
+    color: #2d5a3d;
     text-decoration: none;
-    border-bottom: 1px solid #c9b99a;
+    border-bottom: 1px solid #c4854c;
     padding-bottom: 2px;
     transition: all 0.3s;
 }
 
 .contact-email:hover {
-    color: #b8a088;
-    border-bottom-color: #b8a088;
+    color: #c4854c;
+    border-bottom-color: #c4854c;
 }
 
 .contact-location {
     margin-top: 2rem;
+    font-family: 'Lora', serif;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #aaa;
+    color: #7a7a72;
 }
 
 /* ===== Footer ===== */
 footer {
-    border-top: 1px solid #e8e4df;
+    border-top: 1px solid #dae8d8;
     margin-top: 2rem;
     padding: 3rem 2rem;
+    background: linear-gradient(180deg, #f7f4ef 0%, #eef3ec 100%);
 }
 
 .footer-content {
@@ -373,19 +430,40 @@ footer {
     text-align: center;
 }
 
+.footer-vine {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 40px;
+    height: auto;
+    opacity: 0.5;
+}
+
 .footer-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.08em;
-    color: #ccc;
+    color: #2d5a3d;
     margin-bottom: 0.5rem;
 }
 
 .footer-content p {
+    font-family: 'Lora', serif;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
-    color: #bbb;
+    color: #7a7a72;
+}
+
+/* ===== Fade-in Animation ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== Responsive ===== */
@@ -400,11 +478,11 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(250, 248, 245, 0.98);
+        background: rgba(247, 244, 239, 0.98);
         flex-direction: column;
         padding: 1.5rem 2rem;
         gap: 1.5rem;
-        border-bottom: 1px solid #e8e4df;
+        border-bottom: 1px solid #dae8d8;
     }
 
     nav ul.active {
